@@ -1,40 +1,36 @@
 extends CharacterBody2D
 
 
-var SPEED = 130.0
-var JUMP_VELOCITY = -300.0
-var invulnerable = false
+const SPEED = 130.0
+const FRICTION = 5000
+const ACCELARATION = 600
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var tap: AudioStreamPlayer2D = $tap
-@onready var timer: Timer = $Timer
-@onready var jump: AudioStreamPlayer2D = $jump
+@onready var tap_timer: Timer = $tap_timer
 func _physics_process(delta: float) -> void:
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("move_left", "move_right")
+	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
-	if direction > 0:
+	if direction.x > 0:
 		animated_sprite.flip_h = false
-	elif direction < 0:
+	elif direction.x < 0:
 		animated_sprite.flip_h = true
 		
-	if direction == 0:
+	if direction.length() == 0:
 		animated_sprite.play("idle")
-		timer.stop()
+		tap_timer.stop()
 	else:
 		animated_sprite.play("run")
-		if timer.is_stopped():
-			timer.start()
+		if tap_timer.is_stopped():
+			tap_timer.start()
 	
 	if direction:
-		velocity.x = direction * SPEED
+		velocity = velocity.move_toward(direction * SPEED, ACCELARATION * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 
 	move_and_slide()
 
 
-func _on_timer_timeout() -> void:
+func _on_tap_timer_timeout() -> void:
 	tap.play()

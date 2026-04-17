@@ -1,7 +1,8 @@
-[gd_scene format=4 uid="uid://c5laq2ns3o04k"]
+[gd_scene format=3 uid="uid://c5laq2ns3o04k"]
 
 [ext_resource type="Script" uid="uid://crwkns2cguwob" path="res://script/player.gd" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://br132qnrwdj6c" path="res://Assets/Sprites/knight.png" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://bx0hhg6pk8k88" path="res://Assets/sounds/tap.wav" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -159,10 +160,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 radius = 6.0
 
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_qhqgy"]
-data = PackedByteArray("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")
-format = 3
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 8.0
 
@@ -181,20 +178,18 @@ position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_3vyb7")
 
 [node name="tap" type="AudioStreamPlayer2D" parent="." unique_id=1297857978]
+stream = ExtResource("3_6t5aa")
 
-[node name="Timer" type="Timer" parent="." unique_id=1951771502]
+[node name="tap_timer" type="Timer" parent="." unique_id=1951771502]
 wait_time = 0.3
 
-[node name="jump" type="AudioStreamPlayer2D" parent="." unique_id=536790932]
-stream = SubResource("AudioStreamWAV_qhqgy")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1570292214]
-collision_layer = 4
+collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=33575650]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_qhqgy")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="tap_timer" to="." method="_on_tap_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
