@@ -4,6 +4,7 @@ extends Node
 
 @export var scene_1 = preload("res://Scenes/Monpok01.tscn")
 @export var scene_2 = preload("res://Scenes/Monpok02.tscn")
+@export var scene_3 = preload("res://Scenes/Monpok03.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,9 +26,11 @@ func spawn_grid(area_size):
 			var spawn_pos = start_pos + Vector2(x * cell_size, y * cell_size)
 			spawn_pos += Vector2(cell_size / 2.0, cell_size / 2.0)
 			
-			if roll < 95:
+			if roll < 97:
 				continue
 			elif roll < 98:
+				spawn_object(scene_3, spawn_pos)
+			elif roll < 99:
 				spawn_object(scene_2, spawn_pos)
 			else:
 				spawn_object(scene_1, spawn_pos)
