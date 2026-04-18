@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c6qcbj2evfgq1"]
+
+[ext_resource type="Script" uid="uid://dliov8oyfdxny" path="res://script/monpok_spawn_grassland.gd" id="1_xqw6t"]
+
+[node name="MonpokSpawnGrassland" type="Node" unique_id=1269393051]
+script = ExtResource("1_xqw6t")

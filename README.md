@@ -1,6 +1,6 @@
 A game similar to POKEMON where you must find creatures called
 monpoks and collect them.
 
-Worktime: 2h20min
+Worktime: 3h20min
 
-v.1.2
+v.1.3

@@ -3,7 +3,7 @@ extends AnimatableBody2D
 const IMAGE = "res://Assets/Sprites/Monpok_01.png"
 const TEXT = "Monpok1"
 
-@onready var inventory: Control = %Inventory
+@onready var inventory = get_tree().root.find_child("Inventory", true, false)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

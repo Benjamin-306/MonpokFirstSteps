@@ -177,31 +177,13 @@ offset_top = 144.0
 offset_right = 32.0
 offset_bottom = 193.0
 
-[node name="MonpokSpawnGrassland2" parent="MonpokSpawnContainers" unique_id=384520476 instance=ExtResource("7_6bp64")]
+[node name="MonpokSpawnGrassland" parent="." unique_id=384520476 instance=ExtResource("7_6bp64")]
 
-[node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland2" unique_id=1104410190]
+[node name="ColorRect" type="ColorRect" parent="MonpokSpawnGrassland" unique_id=1104410190]
 visible = false
 offset_left = 240.0
 offset_top = 112.0
 offset_right = 337.0
 offset_bottom = 177.0
-
-[node name="MonpokSpawnGrassland4" parent="MonpokSpawnContainers" unique_id=882697780 instance=ExtResource("7_6bp64")]
-
-[node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland4" unique_id=1338316090]
-visible = false
-offset_left = 304.0
-offset_top = 240.0
-offset_right = 384.0
-offset_bottom = 272.0
-
-[node name="MonpokSpawnGrassland5" parent="MonpokSpawnContainers" unique_id=1439011477 instance=ExtResource("7_6bp64")]
-
-[node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland5" unique_id=1134015174]
-visible = false
-offset_left = 160.0
-offset_top = 269.0
-offset_right = 240.0
-offset_bottom = 291.0
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]
