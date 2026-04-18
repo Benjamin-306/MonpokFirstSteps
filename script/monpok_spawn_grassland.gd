@@ -25,9 +25,9 @@ func spawn_grid(area_size):
 			var spawn_pos = start_pos + Vector2(x * cell_size, y * cell_size)
 			spawn_pos += Vector2(cell_size / 2.0, cell_size / 2.0)
 			
-			if roll < 75:
+			if roll < 95:
 				continue
-			elif roll < 90:
+			elif roll < 98:
 				spawn_object(scene_2, spawn_pos)
 			else:
 				spawn_object(scene_1, spawn_pos)
