@@ -1,6 +1,6 @@
 extends Control
 
-var inventory = [null, null, null]
+var inventory = [null, null, null, null, null, null]
 var full = false
 	
 func add(TEXT, IMAGE):

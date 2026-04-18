@@ -130,6 +130,90 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Monpok4" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1671825710]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 396.0
+offset_top = 8.0
+offset_right = 483.0
+offset_bottom = 95.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=1923738981]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 66.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=714094529]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok5" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=2085773437]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 483.0
+offset_top = 8.0
+offset_right = 570.0
+offset_bottom = 95.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=1651272256]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 66.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=936200576]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok6" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1945788081]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 570.0
+offset_top = 7.0
+offset_right = 657.0
+offset_bottom = 94.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=31177030]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 66.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=1069706989]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory" unique_id=156541778]
 visible = false
 layout_mode = 1

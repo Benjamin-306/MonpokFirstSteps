@@ -13,7 +13,7 @@ config_version=5
 config/name="MonpokFirstSteps®"
 run/main_scene="uid://daigvy7a3x4jm"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://byuxfdj2ycv0f"
 
 [global_group]
 
