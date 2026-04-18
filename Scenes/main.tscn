@@ -58,7 +58,8 @@ offset_bottom = 95.0
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok1" unique_id=158305069]
@@ -67,7 +68,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_top = -24.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -77,16 +79,17 @@ vertical_alignment = 1
 [node name="Monpok2" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1049667352]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 160.0
-offset_top = 7.0
-offset_right = 247.0
-offset_bottom = 94.0
+offset_left = 98.0
+offset_top = 8.0
+offset_right = 185.0
+offset_bottom = 95.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1314481575]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1619867854]
@@ -95,7 +98,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_top = -24.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -105,16 +109,17 @@ vertical_alignment = 1
 [node name="Monpok3" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=903312371]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 287.0
-offset_top = 8.0
-offset_right = 374.0
-offset_bottom = 95.0
+offset_left = 185.0
+offset_top = 7.0
+offset_right = 272.0
+offset_bottom = 94.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=986488911]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = 1.0
+offset_bottom = 67.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=832048717]
@@ -133,9 +138,9 @@ vertical_alignment = 1
 [node name="Monpok4" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1671825710]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 396.0
+offset_left = 272.0
 offset_top = 8.0
-offset_right = 483.0
+offset_right = 359.0
 offset_bottom = 95.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=1923738981]
@@ -151,7 +156,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_top = -24.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -161,9 +167,9 @@ vertical_alignment = 1
 [node name="Monpok5" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=2085773437]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 483.0
+offset_left = 359.0
 offset_top = 8.0
-offset_right = 570.0
+offset_right = 446.0
 offset_bottom = 95.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=1651272256]
@@ -179,7 +185,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_top = -24.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -189,10 +196,10 @@ vertical_alignment = 1
 [node name="Monpok6" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1945788081]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 570.0
-offset_top = 7.0
-offset_right = 657.0
-offset_bottom = 94.0
+offset_left = 446.0
+offset_top = 8.0
+offset_right = 533.0
+offset_bottom = 95.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=31177030]
 layout_mode = 1
@@ -207,7 +214,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_top = -24.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
