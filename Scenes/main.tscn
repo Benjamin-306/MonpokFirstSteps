@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://xltgaoj6y8no" path="res://script/inventory.gd" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://c5laq2ns3o04k" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn_grassland.tscn" id="7_6bp64"]
+[ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("1_8gbba")
@@ -358,5 +359,9 @@ offset_left = 519.0
 offset_top = -81.0
 offset_right = 741.0
 offset_bottom = -30.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=562311448]
+stream = ExtResource("7_344ge")
+autoplay = true
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]
