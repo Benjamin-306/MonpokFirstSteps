@@ -20,7 +20,14 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("idle")
 		tap_timer.stop()
 	else:
-		animated_sprite.play("run")
+		if abs(direction.y) > abs(direction.x):
+			if direction.y > 0:
+				animated_sprite.play("run_f")
+			else:
+				animated_sprite.play("run_b")
+		else:
+			animated_sprite.play("run")
+			
 		if tap_timer.is_stopped():
 			tap_timer.start()
 	
