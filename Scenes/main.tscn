@@ -42,7 +42,7 @@ size = Vector2(2801, 2960)
 size = Vector2(4623, 1268)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iyac"]
-size = Vector2(4170, 3426)
+size = Vector2(3202, 3167)
 
 [node name="Main" type="Node" unique_id=713701403]
 
@@ -388,6 +388,7 @@ offset_bottom = -30.0
 stream = ExtResource("7_344ge")
 autoplay = true
 max_distance = 661160.0
+bus = &"BackgroundMusic"
 
 [node name="MusicChange" type="Node" parent="." unique_id=715968717]
 
@@ -410,12 +411,11 @@ position = Vector2(2301.5, 624)
 shape = SubResource("RectangleShape2D_fdnlq")
 
 [node name="MusicChangeByArea3" parent="MusicChange" unique_id=2043078553 instance=ExtResource("9_ynf5e")]
-visible = false
 position = Vector2(-1154, -1137)
 music = ExtResource("7_344ge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/MusicChangeByArea3" unique_id=318740702]
-position = Vector2(1182, 1412)
+position = Vector2(1666, 1541.5)
 shape = SubResource("RectangleShape2D_6iyac")
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]

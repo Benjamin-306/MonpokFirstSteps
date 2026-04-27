@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crwkns2cguwob" path="res://script/player.gd" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://cvaue7tsy8nue" path="res://Assets/Sprites/monpok_player_sprite.png" id="2_vgqql"]
-[ext_resource type="AudioStream" uid="uid://bx0hhg6pk8k88" path="res://Assets/sounds/tap.wav" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://e2y0ggsxjg3h" path="res://Assets/sounds/Footsteps.mp3" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_vgqql")
@@ -124,8 +124,10 @@ script = ExtResource("1_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=131469810]
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-animation = &"run_f"
+animation = &"run"
 autoplay = "idle"
+frame = 1
+frame_progress = 0.6401522
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=113325905]
 position = Vector2(0, 6)
@@ -133,6 +135,7 @@ shape = SubResource("CircleShape2D_3vyb7")
 
 [node name="tap" type="AudioStreamPlayer2D" parent="." unique_id=1297857978]
 stream = ExtResource("3_6t5aa")
+bus = &"SFX"
 
 [node name="tap_timer" type="Timer" parent="." unique_id=1951771502]
 wait_time = 0.3
