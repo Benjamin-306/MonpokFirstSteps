@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c5laq2ns3o04k" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn_grassland.tscn" id="7_6bp64"]
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
-[ext_resource type="PackedScene" uid="uid://cnxh6mbkomwk2" path="res://Scenes/tile_map.tscn" id="9_hptm8"]
+[ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ov04622e34fs" path="res://Scenes/music_change_by_area.tscn" id="9_ynf5e"]
 [ext_resource type="AudioStream" uid="uid://jqxwse0sixnc" path="res://Assets/sounds/EndlessTallGrass.mp3" id="11_d1ilt"]
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
