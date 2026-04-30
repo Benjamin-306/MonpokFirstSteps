@@ -5,20 +5,48 @@
 [ext_resource type="PackedScene" uid="uid://c5laq2ns3o04k" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn_grassland.tscn" id="7_6bp64"]
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
+[ext_resource type="AudioStream" uid="uid://dfan8gk04k1sk" path="res://Assets/sounds/Pallet Path Dreams(1).mp3" id="9_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ov04622e34fs" path="res://Scenes/music_change_by_area.tscn" id="9_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/Monpokball1.tscn" id="10_hptm8"]
 [ext_resource type="AudioStream" uid="uid://jqxwse0sixnc" path="res://Assets/sounds/EndlessTallGrass.mp3" id="11_d1ilt"]
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hptm8"]
-size = Vector2(2801, 2960)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
+size = Vector2(1920, 2960)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdnlq"]
-size = Vector2(4623, 1268)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1ilt"]
+size = Vector2(528, 496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsu2k"]
+size = Vector2(3408, 272)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
+size = Vector2(2095, 335)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iyac"]
-size = Vector2(3202, 3167)
+size = Vector2(3023, 2274)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1bgf"]
+size = Vector2(1120, 610)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hptm8"]
+size = Vector2(936, 2513)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3802"]
+size = Vector2(2800, 800)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fevyy"]
+size = Vector2(2656, 608)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hibaj"]
+size = Vector2(2304, 2560)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdnlq"]
+size = Vector2(4623, 991)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
+size = Vector2(1217, 224)
 
 [node name="Main" type="Node" unique_id=713701403]
 
@@ -250,6 +278,13 @@ position = Vector2(133, 173)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=451561475]
 zoom = Vector2(2, 2)
+limit_left = -3824
+limit_top = -2416
+limit_right = 4368
+limit_bottom = 2272
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="MonpokSpawnContainers" type="Node" parent="." unique_id=866670643]
 
@@ -360,32 +395,123 @@ bus = &"BackgroundMusic"
 
 [node name="MusicChange" type="Node" parent="." unique_id=715968717]
 
-[node name="MusicChangeByArea" parent="MusicChange" unique_id=637691993 instance=ExtResource("9_ynf5e")]
+[node name="Orange" type="Node" parent="MusicChange" unique_id=513672740]
+
+[node name="MusicChangeByArea" parent="MusicChange/Orange" unique_id=1579152940 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-2896, -415)
+music = ExtResource("9_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/Orange/MusicChangeByArea" unique_id=1301671703]
+position = Vector2(32, 247)
+shape = SubResource("RectangleShape2D_jkdf5")
+
+[node name="MusicChangeByArea2" parent="MusicChange/Orange" unique_id=495458282 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-2896, -415)
+music = ExtResource("9_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/Orange/MusicChangeByArea2" unique_id=1811593662]
+position = Vector2(1464, -985)
+shape = SubResource("RectangleShape2D_d1ilt")
+
+[node name="MusicChangeByArea3" parent="MusicChange/Orange" unique_id=85665509 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-2896, -415)
+music = ExtResource("9_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/Orange/MusicChangeByArea3" unique_id=1352511937]
+position = Vector2(3432, -873)
+shape = SubResource("RectangleShape2D_wsu2k")
+
+[node name="MusicChangeByArea4" parent="MusicChange/Orange" unique_id=829669699 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-2896, -415)
+music = ExtResource("9_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/Orange/MusicChangeByArea4" unique_id=97157426]
+position = Vector2(5783.5, -617.5)
+shape = SubResource("RectangleShape2D_k12tt")
+
+[node name="DarkGreen" type="Node" parent="MusicChange" unique_id=1906906345]
+
+[node name="MusicChangeByArea" parent="MusicChange/DarkGreen" unique_id=2043078553 instance=ExtResource("9_ynf5e")]
+position = Vector2(-1154, -1137)
+music = ExtResource("7_344ge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/DarkGreen/MusicChangeByArea" unique_id=318740702]
+position = Vector2(1705.5, 1922)
+shape = SubResource("RectangleShape2D_6iyac")
+
+[node name="MusicChangeByArea2" parent="MusicChange/DarkGreen" unique_id=43726602 instance=ExtResource("9_ynf5e")]
+position = Vector2(-1154, -1137)
+music = ExtResource("7_344ge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/DarkGreen/MusicChangeByArea2" unique_id=1805399647]
+position = Vector2(-366, 2754)
+shape = SubResource("RectangleShape2D_h1bgf")
+
+[node name="LightGreen" type="Node" parent="MusicChange" unique_id=1416898806]
+
+[node name="MusicChangeByArea" parent="MusicChange/LightGreen" unique_id=637691993 instance=ExtResource("9_ynf5e")]
 visible = false
 position = Vector2(-3815, -1639)
 music = ExtResource("11_d1ilt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/MusicChangeByArea" unique_id=15577993]
-position = Vector2(1390.5, 1470)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/LightGreen/MusicChangeByArea" unique_id=15577993]
+position = Vector2(2386, 1693.5)
 shape = SubResource("RectangleShape2D_hptm8")
+debug_color = Color(0.87617046, 0.34405524, 1.92523e-07, 0.41960785)
 
-[node name="MusicChangeByArea2" parent="MusicChange" unique_id=1132757490 instance=ExtResource("9_ynf5e")]
+[node name="MusicChangeByArea2" parent="MusicChange/LightGreen" unique_id=1233218768 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-3815, -1639)
+music = ExtResource("11_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/LightGreen/MusicChangeByArea2" unique_id=103523327]
+position = Vector2(4255, 887)
+shape = SubResource("RectangleShape2D_b3802")
+debug_color = Color(0.87617046, 0.34405524, 1.92523e-07, 0.41960785)
+
+[node name="MusicChangeByArea3" parent="MusicChange/LightGreen" unique_id=1125386395 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-3815, -1639)
+music = ExtResource("11_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/LightGreen/MusicChangeByArea3" unique_id=1316244881]
+position = Vector2(6855, 1047)
+shape = SubResource("RectangleShape2D_fevyy")
+debug_color = Color(0.87617046, 0.34405524, 1.92523e-07, 0.41960785)
+
+[node name="MusicChangeByArea4" parent="MusicChange/LightGreen" unique_id=254110712 instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-3815, -1639)
+music = ExtResource("11_d1ilt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/LightGreen/MusicChangeByArea4" unique_id=1759079555]
+position = Vector2(7031, 2631)
+shape = SubResource("RectangleShape2D_hibaj")
+debug_color = Color(0.87617046, 0.34405524, 1.92523e-07, 0.41960785)
+
+[node name="Red" type="Node" parent="MusicChange" unique_id=676431449]
+
+[node name="MusicChangeByArea2" parent="MusicChange/Red" unique_id=1132757490 instance=ExtResource("9_ynf5e")]
 visible = false
 position = Vector2(-1156, -2405)
 music = ExtResource("12_6iyac")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/MusicChangeByArea2" unique_id=1778011879]
-position = Vector2(2301.5, 624)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/Red/MusicChangeByArea2" unique_id=1778011879]
+position = Vector2(2301.5, 485.5)
 shape = SubResource("RectangleShape2D_fdnlq")
 
-[node name="MusicChangeByArea3" parent="MusicChange" unique_id=2043078553 instance=ExtResource("9_ynf5e")]
+[node name="MusicChangeByArea3" parent="MusicChange/Red" unique_id=615851380 instance=ExtResource("9_ynf5e")]
 visible = false
-position = Vector2(-1154, -1137)
-music = ExtResource("7_344ge")
+position = Vector2(-1156, -2405)
+music = ExtResource("12_6iyac")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/MusicChangeByArea3" unique_id=318740702]
-position = Vector2(1666, 1541.5)
-shape = SubResource("RectangleShape2D_6iyac")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicChange/Red/MusicChangeByArea3" unique_id=241140968]
+position = Vector2(4004.5, 1093)
+shape = SubResource("RectangleShape2D_pdsj5")
 
 [node name="TileMap" parent="." unique_id=583086938 instance=ExtResource("9_hptm8")]
 
