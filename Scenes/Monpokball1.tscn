@@ -102,7 +102,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_e7i05"]
 radius = 8.0
 
-[node name="Monpokball1" type="Area2D" unique_id=945892380]
+[node name="Monpokball1" type="Area2D" unique_id=945892380 groups=["balls"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 0

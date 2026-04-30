@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/Monpokball1.tscn" id="10_hptm8"]
 [ext_resource type="AudioStream" uid="uid://jqxwse0sixnc" path="res://Assets/sounds/EndlessTallGrass.mp3" id="11_d1ilt"]
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
+[ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
+[ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
 size = Vector2(1920, 2960)
@@ -517,16 +519,34 @@ shape = SubResource("RectangleShape2D_pdsj5")
 
 [node name="Balls" type="Node" parent="." unique_id=1327199442]
 
-[node name="Monpokball1" parent="Balls" unique_id=945892380 groups=["balls"] instance=ExtResource("10_hptm8")]
+[node name="Monpokball1" parent="Balls" unique_id=945892380 instance=ExtResource("10_hptm8")]
 position = Vector2(179, 170)
 
-[node name="Monpokball2" parent="Balls" unique_id=717337552 groups=["balls"] instance=ExtResource("10_hptm8")]
+[node name="Monpokball2" parent="Balls" unique_id=717337552 instance=ExtResource("10_hptm8")]
 position = Vector2(368, -88)
 
-[node name="Monpokball3" parent="Balls" unique_id=378029875 groups=["balls"] instance=ExtResource("10_hptm8")]
+[node name="Monpokball3" parent="Balls" unique_id=378029875 instance=ExtResource("10_hptm8")]
 position = Vector2(-318, 22)
 
-[node name="Monpokball4" parent="Balls" unique_id=1889623998 groups=["balls"] instance=ExtResource("10_hptm8")]
+[node name="Monpokball4" parent="Balls" unique_id=1889623998 instance=ExtResource("10_hptm8")]
 position = Vector2(366, 410)
+
+[node name="TouchButtons" type="Node" parent="." unique_id=29240818]
+script = ExtResource("12_jkdf5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TouchButtons" unique_id=302493619]
+
+[node name="VirtualJoystick" parent="TouchButtons/CanvasLayer" unique_id=912784726 instance=ExtResource("12_fdnlq")]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_right = 150.0
+grow_vertical = 2
+action_left = &"move_left"
+action_up = &"move_up"
+action_right = &"move_right"
+action_down = &"move_down"
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]
