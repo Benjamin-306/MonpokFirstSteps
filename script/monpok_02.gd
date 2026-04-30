@@ -8,6 +8,10 @@ const TEXT = "Monpok2"
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		inventory.add(TEXT, IMAGE)
-		if inventory.full == false:
-			queue_free()
+		if body.balls > 0:
+			body.balls -= 1
+			inventory.add(TEXT, IMAGE)
+			if inventory.full == false:
+				queue_free()
+		else:
+			pass

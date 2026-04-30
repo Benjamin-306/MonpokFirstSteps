@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 130.0
 const FRICTION = 5000
 const ACCELARATION = 600
+var balls: int = 0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var tap: AudioStreamPlayer2D = $tap
@@ -41,3 +42,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_tap_timer_timeout() -> void:
 	tap.play()
+	
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("balls"):
+		balls += 1
+		area.queue_free()

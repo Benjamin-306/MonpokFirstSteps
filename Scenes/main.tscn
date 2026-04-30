@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ov04622e34fs" path="res://Scenes/music_change_by_area.tscn" id="9_ynf5e"]
-[ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/monpokball.tscn" id="10_hptm8"]
+[ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/Monpokball1.tscn" id="10_hptm8"]
 [ext_resource type="AudioStream" uid="uid://jqxwse0sixnc" path="res://Assets/sounds/EndlessTallGrass.mp3" id="11_d1ilt"]
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
 
@@ -389,7 +389,18 @@ shape = SubResource("RectangleShape2D_6iyac")
 
 [node name="TileMap" parent="." unique_id=583086938 instance=ExtResource("9_hptm8")]
 
-[node name="Area2D" parent="." unique_id=945892380 instance=ExtResource("10_hptm8")]
-position = Vector2(196, 175)
+[node name="Balls" type="Node" parent="." unique_id=1327199442]
+
+[node name="Monpokball1" parent="Balls" unique_id=945892380 groups=["balls"] instance=ExtResource("10_hptm8")]
+position = Vector2(179, 170)
+
+[node name="Monpokball2" parent="Balls" unique_id=717337552 groups=["balls"] instance=ExtResource("10_hptm8")]
+position = Vector2(368, -88)
+
+[node name="Monpokball3" parent="Balls" unique_id=378029875 groups=["balls"] instance=ExtResource("10_hptm8")]
+position = Vector2(-318, 22)
+
+[node name="Monpokball4" parent="Balls" unique_id=1889623998 groups=["balls"] instance=ExtResource("10_hptm8")]
+position = Vector2(366, 410)
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]
