@@ -1,5 +1,6 @@
 extends Node
 
+var all_locked = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -8,3 +9,5 @@ func _process(_delta: float) -> void:
 			$CanvasLayer/Inventory.show()
 		else:
 			$CanvasLayer/Inventory.hide()
+			
+	all_locked = $CanvasLayer/Inventory.is_visible_in_tree()

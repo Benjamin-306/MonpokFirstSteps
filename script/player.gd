@@ -10,6 +10,8 @@ var balls: int = 0
 @onready var tap: AudioStreamPlayer2D = $tap
 @onready var tap_timer: Timer = $tap_timer
 func _physics_process(delta: float) -> void:
+	if %GameManager.all_locked == true:
+		return
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	if direction.x > 0:

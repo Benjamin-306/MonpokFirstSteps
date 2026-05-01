@@ -57,6 +57,7 @@ radius = 33.0
 [node name="Main" type="Node" unique_id=713701403]
 
 [node name="GameManager" type="Node" parent="." unique_id=1611143294]
+unique_name_in_owner = true
 script = ExtResource("1_21xkr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=296014457]
