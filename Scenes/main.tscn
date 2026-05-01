@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
 [ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://co0ln7v7grc43" path="res://Assets/Sprites/InvetorySign.png" id="14_jkdf5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
 size = Vector2(1920, 2960)
@@ -49,6 +50,9 @@ size = Vector2(4623, 991)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
 size = Vector2(1217, 224)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
+radius = 33.0
 
 [node name="Main" type="Node" unique_id=713701403]
 
@@ -537,7 +541,6 @@ script = ExtResource("12_jkdf5")
 [node name="CanvasLayer" type="CanvasLayer" parent="TouchButtons" unique_id=302493619]
 
 [node name="VirtualJoystick" parent="TouchButtons/CanvasLayer" unique_id=912784726 instance=ExtResource("12_fdnlq")]
-visible = false
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -548,5 +551,20 @@ action_left = &"move_left"
 action_up = &"move_up"
 action_right = &"move_right"
 action_down = &"move_down"
+
+[node name="Control" type="Control" parent="TouchButtons/CanvasLayer" unique_id=1264197857]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="TouchButtons/CanvasLayer/Control" unique_id=1826075087]
+scale = Vector2(1.8125, 1.8125)
+texture_normal = ExtResource("14_jkdf5")
+texture_pressed = ExtResource("14_jkdf5")
+shape = SubResource("CircleShape2D_wsu2k")
+action = "inventory"
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]

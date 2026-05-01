@@ -2,14 +2,12 @@ extends Node
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	var platform = OS.get_name()
-	
-	if platform == "Android" or platform == "iOS":
-		$CanvasLayer/VirtualJoystick.show()
+func _ready() -> void:
 		
-	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
-		$CanvasLayer/VirtualJoystick.show()
+	var platform = OS.get_name()
+	var is_mobile = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
 	
+	if is_mobile:
+		$CanvasLayer.show()
 	else:
-		$CanvasLayer/VirtualJoystick.hide()
+		$CanvasLayer.hide()
