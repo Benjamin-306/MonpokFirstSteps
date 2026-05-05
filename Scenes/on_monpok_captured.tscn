@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://titfgcjosssa"]
+
+[ext_resource type="Script" uid="uid://bg2nibxmtfrrc" path="res://script/on_monpok_captured.gd" id="1_i4ija"]
+[ext_resource type="Texture2D" uid="uid://jy7jwwhkidyj" path="res://Assets/Sprites/WorldTileset.png" id="1_kpohc"]
+[ext_resource type="Texture2D" uid="uid://b0vpur2sbqe5h" path="res://Assets/Sprites/Monpok_01.png" id="2_i4ija"]
+
+[node name="OnMonpokCaptured" type="CanvasLayer" unique_id=671092961]
+script = ExtResource("1_i4ija")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1126321913]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Button" parent="ColorRect" unique_id=251610642]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -233.0
+offset_top = -96.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Fangen"
+
+[node name="Label2" type="Button" parent="ColorRect" unique_id=1176816710]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -507.0
+offset_top = -96.0
+offset_right = -274.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Fliehen"
+
+[node name="Label3" type="Label" parent="ColorRect" unique_id=630057201]
+layout_mode = 1
+offset_right = 262.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Monpok"
+
+[node name="WorldTileset" type="Sprite2D" parent="ColorRect" unique_id=1584393867]
+position = Vector2(579, 334.00003)
+scale = Vector2(24.375, 24.375)
+texture = ExtResource("1_kpohc")
+region_enabled = true
+region_rect = Rect2(15, 0, 16, 16)
+
+[node name="Monpok01" type="Sprite2D" parent="ColorRect" unique_id=312465912]
+position = Vector2(582.00006, 306.00003)
+scale = Vector2(16.1875, 16.1875)
+texture = ExtResource("2_i4ija")
+
+[connection signal="pressed" from="ColorRect/Label" to="." method="_on_label_pressed"]
+[connection signal="pressed" from="ColorRect/Label2" to="." method="_on_label_2_pressed"]

@@ -4,14 +4,16 @@ const IMAGE = "res://Assets/Sprites/Monpok_03.png"
 const TEXT = "Monpok3"
 
 @onready var inventory = get_tree().root.find_child("Inventory", true, false)
-
+@onready var OnMonpokCaptured = get_tree().root.find_child("OnMonpokCaptured", true, false)
+var catch = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		if body.balls > 0:
-			body.balls -= 1
-			inventory.add(TEXT, IMAGE)
-			if inventory.full == false:
-				queue_free()
-		else:
-			pass
+	OnMonpokCaptured.show()
+	OnMonpokCaptured.IMAGE = IMAGE
+	OnMonpokCaptured.TEXT = TEXT
+	OnMonpokCaptured.body = body
+	OnMonpokCaptured.add()
+	if inventory.full == false:
+		queue_free()
+	else:
+		pass
