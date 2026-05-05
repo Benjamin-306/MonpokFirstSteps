@@ -15,12 +15,14 @@ func _ready() -> void:
 func add():
 	if TEXT is String:
 		$ColorRect/Label3.text = TEXT
+		$ColorRect/Monpok.texture = load(IMAGE)
 		if catch == true:
 			hide()
 			if body.name == "Player":
 				if body.balls > 0:
 					body.balls -= 1
 					inventory.add(TEXT, IMAGE)
+					catch = false
 		
 
 

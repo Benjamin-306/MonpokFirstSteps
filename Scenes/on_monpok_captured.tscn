@@ -60,7 +60,7 @@ texture = ExtResource("1_kpohc")
 region_enabled = true
 region_rect = Rect2(15, 0, 16, 16)
 
-[node name="Monpok01" type="Sprite2D" parent="ColorRect" unique_id=312465912]
+[node name="Monpok" type="Sprite2D" parent="ColorRect" unique_id=312465912]
 position = Vector2(582.00006, 306.00003)
 scale = Vector2(16.1875, 16.1875)
 texture = ExtResource("2_i4ija")
