@@ -8,12 +8,10 @@ const TEXT = "Monpok3"
 var catch = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	OnMonpokCaptured.show()
-	OnMonpokCaptured.IMAGE = IMAGE
-	OnMonpokCaptured.TEXT = TEXT
-	OnMonpokCaptured.body = body
-	OnMonpokCaptured.add()
-	if inventory.full == false:
-		queue_free()
-	else:
-		pass
+	if body.name == "Player":
+		OnMonpokCaptured.setup(IMAGE, TEXT, body)
+		if body.balls > 0:
+			if inventory.full == false:
+				queue_free()
+			else:
+				pass
