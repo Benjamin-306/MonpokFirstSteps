@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bg2nibxmtfrrc" path="res://script/on_monpok_captured.gd" id="1_i4ija"]
 [ext_resource type="Texture2D" uid="uid://jy7jwwhkidyj" path="res://Assets/Sprites/WorldTileset.png" id="1_kpohc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpohc"]
+
 [node name="OnMonpokCaptured" type="CanvasLayer" unique_id=671092961]
 script = ExtResource("1_i4ija")
 
@@ -63,5 +65,17 @@ region_rect = Rect2(15, 0, 16, 16)
 position = Vector2(582.00006, 306.00003)
 scale = Vector2(16.1875, 16.1875)
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="ColorRect" unique_id=1828663173]
+position = Vector2(1036, 600)
+scale = Vector2(11.562377, 4.6404624)
+shape = SubResource("RectangleShape2D_kpohc")
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="ColorRect" unique_id=90780010]
+position = Vector2(762, 599)
+scale = Vector2(11.562377, 4.6404624)
+shape = SubResource("RectangleShape2D_kpohc")
+
 [connection signal="pressed" from="ColorRect/CatchButton" to="." method="_on_catch_button_pressed"]
 [connection signal="pressed" from="ColorRect/EscapeButton" to="." method="_on_escape_button_pressed"]
+[connection signal="pressed" from="ColorRect/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="ColorRect/TouchScreenButton2" to="." method="_on_touch_screen_button_2_pressed"]

@@ -50,3 +50,12 @@ func _on_catch_button_pressed() -> void:
 
 func _on_escape_button_pressed() -> void:
 	hide()
+
+
+func _on_touch_screen_button_pressed() -> void:
+	catch = true
+	add()
+
+
+func _on_touch_screen_button_2_pressed() -> void:
+	hide()
