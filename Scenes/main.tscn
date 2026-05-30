@@ -13,9 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/Monpokball1.tscn" id="10_hptm8"]
 [ext_resource type="AudioStream" uid="uid://jqxwse0sixnc" path="res://Assets/sounds/EndlessTallGrass.mp3" id="11_d1ilt"]
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
-[ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
-[ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
-[ext_resource type="Texture2D" uid="uid://co0ln7v7grc43" path="res://Assets/Sprites/InvetorySign.png" id="14_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
@@ -53,9 +50,6 @@ size = Vector2(4623, 991)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
 size = Vector2(1217, 224)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
-radius = 33.0
 
 [node name="Main" type="Node" unique_id=713701403]
 
@@ -573,39 +567,6 @@ position = Vector2(-318, 22)
 
 [node name="Monpokball4" parent="Balls" unique_id=1889623998 instance=ExtResource("10_hptm8")]
 position = Vector2(366, 410)
-
-[node name="TouchButtons" type="Node" parent="." unique_id=29240818]
-script = ExtResource("12_jkdf5")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="TouchButtons" unique_id=302493619]
-visible = false
-
-[node name="VirtualJoystick" parent="TouchButtons/CanvasLayer" unique_id=912784726 instance=ExtResource("12_fdnlq")]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 150.0
-offset_right = 150.0
-grow_vertical = 2
-action_left = &"move_left"
-action_up = &"move_up"
-action_right = &"move_right"
-action_down = &"move_down"
-
-[node name="Control" type="Control" parent="TouchButtons/CanvasLayer" unique_id=1264197857]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="TouchButtons/CanvasLayer/Control" unique_id=1826075087]
-scale = Vector2(1.8125, 1.8125)
-texture_normal = ExtResource("14_jkdf5")
-texture_pressed = ExtResource("14_jkdf5")
-shape = SubResource("CircleShape2D_wsu2k")
-action = "inventory"
 
 [node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
 position = Vector2(360, 34)
